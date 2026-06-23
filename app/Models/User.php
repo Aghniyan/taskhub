@@ -29,4 +29,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // User punya BANYAK Project
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
+
 }
